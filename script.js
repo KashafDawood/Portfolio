@@ -3,12 +3,22 @@
 // ============mobile menu toggler===================
 const menuBtn = document.getElementById("openMenuBtn");
 const navContainer = document.getElementById("mobileNavContainer");
+const menuIcon = document.getElementById("menuIcon");
 
 navContainer.style.right = "-767px";
 
 menuBtn.onclick = function(){
 
-    (navContainer.style.right === "-767px")? navContainer.style.right = "0" : navContainer.style.right = "-767px";
+    if(navContainer.style.right === "-767px"){
+        navContainer.style.right = "0"
+        menuIcon.classList.add("uil-multiply");
+        menuIcon.classList.remove("uil-bars");
+    }
+    else{
+        navContainer.style.right = "-767px";
+        menuIcon.classList.remove("uil-multiply");
+        menuIcon.classList.add("uil-bars");
+    }
 }
 
 // ========when click on navlink it will hide the navbar========

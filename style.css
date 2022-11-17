@@ -9,14 +9,13 @@
 }
 
 :root {
-    --color-primary: #F0FF42;
-    --color-dark: #486432;
-    --color-secondary: #82CD47;
-    --color-light: #379237;
-    --color-vlight: #54B435;
+    --color-primary: #F49D1A;
+    --color-dark: #644619;
+    --color-secondary: #FFE15D;
+    --color-light: #DC3535;
+    --color-vlight: #B01E68;
     --color-white: #fff;
     --color-black: #222;
-    --color-gradient: rgba(166, 255, 2, 0.2);
 }
 
 html{
@@ -128,7 +127,7 @@ nav a:hover{
     height: 5rem;
     position: fixed;
     z-index: 2;
-    background-color: var(--color-vlight);
+    background-color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -140,20 +139,20 @@ nav a:hover{
 }
 
 .navMobile a{
-    color: var(--color-white);
+    color: var(--color-black);
     font-size: 1.5rem;
     font-weight: 600;
     transition: all 400ms ease;
 }
 
 .navMobile a:hover{
-    color: var(--color-dark);
+    color: var(--color-primary);
 }
 
 .navMobile a span{
     font-size: 2rem;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.274);
+    color: rgba(65, 65, 65, 0.137);
 }
 
 .mobileBtn{
@@ -165,7 +164,7 @@ nav a:hover{
 }
 
 .mobileBtn:hover{
-    color: var(--color-dark);
+    color: var(--color-secondary);
 }
 
 .mobileMenuContainer{
