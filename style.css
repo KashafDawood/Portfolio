@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5{
 }
 
 h1{
-    font-size: 4.4rem;
+    font-size: 4rem;
     line-height: 1.1;
 }
 
@@ -164,7 +164,7 @@ nav a:hover{
 }
 
 .mobileBtn:hover{
-    color: var(--color-secondary);
+    color: var(--color-dark);
 }
 
 .mobileMenuContainer{
@@ -180,4 +180,77 @@ nav a:hover{
 
 .navMobileMenu li{
     padding: 1.5rem 0;
+}
+
+/* ================hero section===================== */
+.heroContainer{
+    padding-top: 8rem;
+}
+
+.heroText{
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.heroText h4{
+    color: var(--color-primary);
+    font-size: 1.3rem;
+}
+
+.heroText p{
+    padding: 1.2rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.heroImg{
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 12rem;
+    transform: scaleX(-1);
+}
+
+.heroBgContainer{
+    max-width: 100%;
+    max-height: 26rem;
+    position: absolute;
+    top: 36rem;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.heroBg{
+    position: relative;
+    left: -3rem;
+    width: 40rem;
+    height: 38rem;
+    background: var(--color-primary);
+    border-radius: 50%;
+}
+
+/* ==============socials================= */
+.socials{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 1.5rem;
+    position: relative;
+    top: 13rem;
+}
+.socials a{
+    font-size: 1.5rem;
+    color: var(--color-white);
+    padding: 0.8rem 0;
+}
+
+/* ===============collab================= */
+.collab{
+    background-color: rgb(238, 238, 238);
+    height: 12rem;
+    width: 100%;
+    position: relative;
+    bottom: 21rem;
+    right: 0;
 }

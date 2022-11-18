@@ -27,5 +27,7 @@ const navLink = Array.from(document.getElementsByClassName("navLink"));
 for(let i = 0; i < navLink.length; i++){
     navLink[i].addEventListener("click", function(){
         navContainer.style.right = "-767px";
+        menuIcon.classList.remove("uil-multiply");
+        menuIcon.classList.add("uil-bars");
     }); 
 }
