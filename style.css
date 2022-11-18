@@ -189,7 +189,7 @@ nav a:hover{
 
 .heroText{
     text-align: center;
-    margin: 1.5rem;
+    margin: 1rem 1.5rem;
 }
 
 .heroText h4{
@@ -245,6 +245,11 @@ nav a:hover{
     padding: 0.8rem 0;
 }
 
+.socials a:hover{
+    color: var(--color-dark);
+    transition: all 800ms ease;
+}
+
 /* ===============collab================= */
 .collab{
     background-color: rgb(238, 238, 238);
@@ -253,4 +258,51 @@ nav a:hover{
     position: relative;
     bottom: 21rem;
     right: 0;
+}
+
+/* ================Services=============== */
+#services{
+    margin: -15rem 2rem;
+}
+
+.servicesContainer{
+    padding: 2rem 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1.5rem;
+}
+
+.service{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    width: 100%;
+    height: 20rem;
+    padding: 4rem 2rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    cursor: pointer;
+}
+
+.service:hover{
+    background: var(--color-primary);
+    color: var(--color-white);
+    transition: all 800ms ease;
+    box-shadow: 0 10px 20px rgba(255, 136, 0, 0.356);
+}
+
+.service i{
+    font-size: 1.5rem;
+}
+
+.service .serviceIcon{
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+.service h4{
+    padding: 1rem 0;
+}
+
+.service P{
+    font-size: 1.5rem;
+    color: rgb(110, 110, 110);
 }
