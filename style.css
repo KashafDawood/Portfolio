@@ -16,6 +16,7 @@
     --color-vlight: #B01E68;
     --color-white: #fff;
     --color-black: #222;
+    --color-variant: rgba(240, 135, 16, 0.363);
 }
 
 html{
@@ -88,7 +89,7 @@ img{
 
 .btnPrimary:hover{
     border-color: var(--color-primary);
-    background: var(--color-vlight);
+    background: var(--color-secondary);
     color: var(--color-primary);
 }
 
@@ -278,15 +279,15 @@ nav a:hover{
     width: 100%;
     height: 20rem;
     padding: 4rem 2rem;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.384);
     cursor: pointer;
 }
 
 .service:hover{
     background: var(--color-primary);
     color: var(--color-white);
-    transition: all 800ms ease;
-    box-shadow: 0 10px 20px rgba(255, 136, 0, 0.356);
+    transition: all 600ms ease;
+    box-shadow: 0 0 1.6rem var(--color-variant);
 }
 
 .service i{
@@ -305,4 +306,54 @@ nav a:hover{
 .service P{
     font-size: 1.5rem;
     color: rgb(110, 110, 110);
+}
+
+/* ==============portfolio============= */
+#portfolio{
+    background-color: rgb(238, 238, 238);
+}
+
+.porfolioGroup{
+    margin: 17rem 2rem;
+    padding: 4rem 0;
+}
+
+.portfolioText p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1rem 0;
+    color: var(--color-black);
+}
+
+.portfolioParaLink:hover{
+    cursor: pointer;
+    color: var(--color-primary);
+    padding-left: 25px;
+    transition: all 500ms ease;
+}
+
+.portfolioContainer{
+    margin: 4rem 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+}
+
+.portfolioProjectImage{
+    height: 20rem;
+    display: block;
+    border: 1rem solid var(--color-white);
+    overflow: hidden;
+    box-shadow: 0 0 1.6rem var(--color-variant);
+    margin-bottom: 1rem;
+    transition: all 400ms ease;
+}
+
+.portfolioProjectImage img{
+    transform: 0;
+    transition: all 5s ease;
+}
+
+.portfolioProjectImage:hover img{
+    transform: translateY(calc(-100% + 18rem));
 }
