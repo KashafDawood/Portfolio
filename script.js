@@ -36,7 +36,6 @@ for (let i = 0; i < navLink.length; i++) {
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
-    grapCursor: true,
     loop: true,
     pagination: {
         el: ".swiper-pagination",

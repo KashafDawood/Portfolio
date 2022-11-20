@@ -9,14 +9,13 @@
 }
 
 :root {
-    --color-primary: #F49D1A;
-    --color-dark: #644619;
-    --color-secondary: #FFE15D;
-    --color-light: #DC3535;
-    --color-vlight: #B01E68;
+    --color-primary: #43AA8B;
+    --color-dark: #154C47;
+    --color-secondary: #E4F4EC;
+    --color-gradient: linear-gradient(290deg, rgba(67,170,139,1) 21%, rgba(21,76,71,1) 100%);
     --color-white: #fff;
     --color-black: #222;
-    --color-variant: rgba(240, 135, 16, 0.363);
+    --color-variant: #154c479a;
 }
 
 /* =========custom scrollbar============= */
@@ -27,12 +26,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--color-secondary);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--color-primary);
+    background: var(--color-dark);
 }
 
 
@@ -45,6 +44,7 @@ body {
     font-weight: 300;
     color: var(--color-dark);
     line-height: 1.5;
+    background: var(--color-gradient);
 }
 
 h1,
@@ -52,7 +52,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: var(--color-black);
+    color: var(--color-secondary);
 }
 
 h1 {
@@ -161,7 +161,7 @@ nav a:hover {
 }
 
 .navMobile a {
-    color: var(--color-black);
+    color: var(--color-secondary);
     font-size: 1.5rem;
     font-weight: 600;
     transition: all 400ms ease;
@@ -174,7 +174,7 @@ nav a:hover {
 .navMobile a span {
     font-size: 2rem;
     font-weight: 900;
-    color: rgba(65, 65, 65, 0.137);
+    color: rgba(65, 65, 65, 0.315);
 }
 
 .mobileBtn {
@@ -193,7 +193,7 @@ nav a:hover {
     width: 100vw;
     height: 100vh;
     padding: 8rem 2rem;
-    background: var(--color-secondary);
+    background: var(--color-gradient);
     position: fixed;
     right: -767px;
     z-index: 1;
@@ -223,7 +223,7 @@ nav a:hover {
     padding: 1.2rem 0;
     font-size: 1.1rem;
     font-weight: 500;
-    color: var(--color-dark);
+    color: var(--color-secondary);
 }
 
 .heroImg {
@@ -258,7 +258,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     float: right;
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
     position: relative;
     top: 18rem;
 }
@@ -276,12 +276,25 @@ nav a:hover {
 
 /* ===============collab================= */
 .collab {
-    background-color: rgb(238, 238, 238);
-    height: 12rem;
+    background-color: var(--color-secondary);
+    height: 10rem;
     width: 100%;
     position: relative;
     bottom: 21rem;
     right: 0;
+}
+
+.collabContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    padding: 2.5rem 0;
+    row-gap: 1rem;
+}
+
+.collabContainer .lang{
+    font-size: 2.2rem;
+    color: var(--color-dark);
 }
 
 /* ================Services=============== */
@@ -297,7 +310,7 @@ nav a:hover {
 }
 
 .service {
-    background-color: var(--color-white);
+    background-color: var(--color-secondary);
     color: var(--color-black);
     width: 100%;
     height: 20rem;
@@ -320,6 +333,7 @@ nav a:hover {
 
 .service h4 {
     padding: 1rem 0;
+    color: var(--color-black);
 }
 
 .service P {
@@ -333,12 +347,16 @@ nav a:hover {
 
 /* ==============portfolio============= */
 #portfolio {
-    background-color: rgb(238, 238, 238);
+    background-color: var(--color-secondary);
 }
 
 .porfolioGroup {
     margin: 17rem 2rem;
     padding: 4rem 0;
+}
+
+.portfolioText h3{
+    color: var(--color-black);
 }
 
 .portfolioText p {
@@ -369,7 +387,6 @@ nav a:hover {
 .portfolioProjectImage {
     height: 20rem;
     display: block;
-    border: 1rem solid var(--color-white);
     overflow: hidden;
     box-shadow: 0 0 1.6rem var(--color-variant);
     margin-bottom: 1rem;
@@ -386,12 +403,25 @@ nav a:hover {
 }
 
 .whitespace {
-    margin-top: -17rem;
+    margin-top: -10rem;
 }
 
 /* ==============Testimonial================== */
-#clients {
+#clients{
     height: 40rem;
+}
+
+.testiText{
+    text-align: center;
+    padding: 0 3rem 2rem;
+}
+
+.testiText p{
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.clientTesti {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -402,6 +432,7 @@ nav a:hover {
     width: 100%;
     overflow: hidden;
     position: relative;
+    cursor: grab;
 }
 
 .testimonial .image {
@@ -430,7 +461,7 @@ nav a:hover {
 
 .slide .quoteIcon {
     font-size: 2rem;
-    color: var(--color-primary);
+    color: var(--color-dark);
 }
 
 .slide .detail {
@@ -443,15 +474,13 @@ nav a:hover {
 
 .slide .detail .job {
     font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.527)
+    color: rgba(0, 0, 0, 0.527);
 }
 
 .sliderBtn{
     height: 2.5rem;
     width: 2.5rem;
-    color: var(--color-white);
-    border-radius: 50%;
-    background-color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 .sliderBtn::after,
@@ -460,5 +489,5 @@ nav a:hover {
 }
 
 .swiper-pagination-bullet-active{
-    background-color: var(--color-primary);
+    background-color: var(--color-dark);
 }
