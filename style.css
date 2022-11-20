@@ -56,7 +56,7 @@ h5 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.1;
 }
 
@@ -211,12 +211,13 @@ nav a:hover {
 
 .heroText {
     text-align: center;
-    margin: 1.2rem 1.5rem;
+    margin: 0 1.5rem;
+    padding-top: 4rem;
 }
 
 .heroText h4 {
     color: var(--color-primary);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .heroText p {
@@ -227,31 +228,31 @@ nav a:hover {
 }
 
 .heroImg {
-    max-width: 450px;
     margin: 0 auto;
-    position: relative;
-    bottom: 12rem;
+    min-height: 40rem;
+    max-width: 450px;
+    padding-top: 3rem;
     transform: scaleX(-1);
     z-index: -3;
 }
 
-.heroBgContainer {
+/* .heroBgContainer {
     max-width: 100%;
     max-height: 26rem;
-    position: absolute;
-    top: 43rem;
+    position: relative;
+    bottom: 35rem;
     z-index: -5;
     overflow: hidden;
 }
 
 .heroBg {
     position: relative;
-    left: -3rem;
+    right: 0rem;
     width: 40rem;
     height: 38rem;
     background: var(--color-primary);
     border-radius: 50%;
-}
+} */
 
 /* ==============socials================= */
 .socials {
@@ -279,9 +280,6 @@ nav a:hover {
     background-color: var(--color-secondary);
     height: 10rem;
     width: 100%;
-    position: relative;
-    bottom: 21rem;
-    right: 0;
 }
 
 .collabContainer{
@@ -299,7 +297,7 @@ nav a:hover {
 
 /* ================Services=============== */
 #services {
-    margin: -15rem 2rem;
+    margin: 4rem 2rem;
 }
 
 .servicesContainer {
@@ -351,7 +349,7 @@ nav a:hover {
 }
 
 .porfolioGroup {
-    margin: 17rem 2rem;
+    margin: 0 2rem;
     padding: 4rem 0;
 }
 
@@ -402,18 +400,15 @@ nav a:hover {
     transform: translateY(calc(-100% + 18rem));
 }
 
-.whitespace {
-    margin-top: -10rem;
-}
-
 /* ==============Testimonial================== */
 #clients{
+    margin: 4rem 0;
     height: 40rem;
 }
 
 .testiText{
     text-align: center;
-    padding: 0 3rem 2rem;
+    padding: 0 3rem 1rem;
 }
 
 .testiText p{
@@ -533,3 +528,94 @@ nav a:hover {
     padding: 0.5rem 1.5rem;
     background: var(--color-black);
 }
+/* 
+for tablet and small laptops
+@media screen and (min-width: 540px) and (max-width: 767px){
+
+    nav
+    .navMobileContainer {
+        padding: 0 3rem;
+    }
+
+    hero section
+    .heroContainer {
+        padding-top: 8rem;
+        padding-bottom: 25rem;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        bottom: 10rem;
+        align-items: center;
+    }
+
+    .heroText{
+        margin: 0;
+        flex-basis: 60%;
+        text-align: start;
+        padding: 0 1.5rem 0 3rem;
+    }
+
+    .heroText h4 {
+        font-size: 1.1rem;
+    }
+
+    .heroText h1{
+        font-size: 2rem;
+    }
+    
+    .heroText p {
+        padding: 0.8rem 0;
+        font-size: 0.8rem;
+    }
+
+    .heroText .btn{
+        padding: 0.5rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .heroImg {
+        flex-basis: 40%;
+        max-width: 100%;
+        margin: 0;
+        position: relative;
+        bottom: 0;
+        right: 2.5rem;
+    }
+
+    .heroBgContainer {
+        top: 12rem;
+        left: 25rem;
+    }
+    
+    .heroBg {
+        left: 0rem;
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .socials {
+        float: none;
+        margin-right: 0;
+        position: relative;
+        top: 1rem;
+        left: 16.5rem;
+    }
+
+    .socials a {
+        font-size: 1.2rem;
+        padding: 0.4rem 0;
+    } 
+
+    collab
+    .collab {
+        height: 10rem;
+        width: 100%;
+        position: relative;
+        bottom: 28rem;
+        right: 0;
+    }
+
+} 
+
+*/
