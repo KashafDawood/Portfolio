@@ -12,7 +12,7 @@
     --color-primary: #43AA8B;
     --color-dark: #154C47;
     --color-secondary: #E4F4EC;
-    --color-gradient: linear-gradient(290deg, rgba(67,170,139,1) 21%, rgba(21,76,71,1) 100%);
+    --color-gradient: linear-gradient(290deg, rgba(67, 170, 139, 1) 21%, rgba(21, 76, 71, 1) 100%);
     --color-white: #fff;
     --color-black: #222;
     --color-variant: #154c479a;
@@ -121,26 +121,46 @@ img {
 
 /* ==================NavBar====================== */
 nav {
+    display: none;
+}
+
+.windowScroll{
+    background: var(--color-primary);
+}
+
+.navContainer{
     width: 100vw;
     height: 5rem;
     position: fixed;
     z-index: 2;
-    background-color: #7D8F69;
-    display: none;
+    display: flex;
+    align-items: center;
 }
 
 nav a {
-    color: var(--color-black);
-    font-size: 0.9rem;
+    color: var(--color-secondary);
+    font-size: 1rem;
+    font-weight: 600;
     transition: all 400ms ease;
 }
 
 nav a:hover {
-    color: var(--color-primary);
+    color: var(--color-black);
 }
 
-.navContainer {
-    padding: 0 2rem;
+.navMenu ul li{
+    display: inline-block;
+    padding-right: 1.2rem;
+}
+
+.navLogo{
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.navMenu{
+    flex-basis: 70%;
+    text-align: center;
 }
 
 /* =================Mobile Nav================== */
@@ -205,14 +225,21 @@ nav a:hover {
 }
 
 /* ================hero section===================== */
-.heroContainer {
-    padding-top: 8rem;
+header {
+    position: relative;
+    top: 5rem;
 }
 
-.heroText {
-    text-align: center;
+.heroContainer {
+    width: 100%;
+}
+
+.heroContainerLeft {
     margin: 0 1.5rem;
     padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .heroText h4 {
@@ -227,8 +254,14 @@ nav a:hover {
     color: var(--color-secondary);
 }
 
-.heroImg {
-    margin: 0 auto;
+.heroContainerRight {
+    position: relative;
+}
+
+.heroImg img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     min-height: 40rem;
     max-width: 450px;
     padding-top: 3rem;
@@ -236,9 +269,10 @@ nav a:hover {
     z-index: -3;
 }
 
-/* .heroBgContainer {
-    max-width: 100%;
-    max-height: 26rem;
+.heroBgContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -37rem;
     position: relative;
     bottom: 35rem;
     z-index: -5;
@@ -246,22 +280,20 @@ nav a:hover {
 }
 
 .heroBg {
-    position: relative;
-    right: 0rem;
     width: 40rem;
-    height: 38rem;
+    height: 40rem;
     background: var(--color-primary);
     border-radius: 50%;
-} */
+}
 
 /* ==============socials================= */
 .socials {
+    position: absolute;
+    top: 20rem;
+    right: 1.5rem;
     display: flex;
     flex-direction: column;
-    float: right;
-    margin-right: 1.2rem;
-    position: relative;
-    top: 18rem;
+    gap: 1.2rem;
 }
 
 .socials a {
@@ -280,9 +312,12 @@ nav a:hover {
     background-color: var(--color-secondary);
     height: 10rem;
     width: 100%;
+    position: relative;
+    bottom: 3rem;
+    margin-bottom: -3rem;
 }
 
-.collabContainer{
+.collabContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
@@ -290,7 +325,7 @@ nav a:hover {
     row-gap: 1rem;
 }
 
-.collabContainer .lang{
+.collabContainer .lang {
     font-size: 2.2rem;
     color: var(--color-dark);
 }
@@ -298,6 +333,10 @@ nav a:hover {
 /* ================Services=============== */
 #services {
     margin: 4rem 2rem;
+}
+
+.expContainer{
+    display: none;
 }
 
 .servicesContainer {
@@ -353,7 +392,7 @@ nav a:hover {
     padding: 4rem 0;
 }
 
-.portfolioText h3{
+.portfolioText h3 {
     color: var(--color-black);
 }
 
@@ -401,17 +440,16 @@ nav a:hover {
 }
 
 /* ==============Testimonial================== */
-#clients{
+#clients {
     margin: 4rem 0;
-    height: 40rem;
 }
 
-.testiText{
+.testiText {
     text-align: center;
     padding: 0 3rem 1rem;
 }
 
-.testiText p{
+.testiText p {
     color: var(--color-black);
     font-weight: 500;
 }
@@ -472,150 +510,204 @@ nav a:hover {
     color: rgba(0, 0, 0, 0.527);
 }
 
-.sliderBtn{
+.sliderBtn {
     height: 2.5rem;
     width: 2.5rem;
     color: var(--color-secondary);
 }
 
 .sliderBtn::after,
-.sliderBtn::before{
+.sliderBtn::before {
     font-size: 1.3rem;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     background-color: var(--color-dark);
 }
 
 /* =============footer================ */
-#contact{
+#contact {
     background: var(--color-dark);
     margin-top: 5rem;
     padding: 4rem 2rem;
 }
 
-.contactContainer{
+.contactContainer {
     display: flex;
     flex-direction: column;
     row-gap: 4rem;
 }
 
-.contactContainer p{
+.contactContainer p {
     color: var(--color-secondary);
     padding: 1rem 0;
 }
 
-.socialFooter{
-    top: 0;
+.socialFooter {
+    position: static;
     flex-direction: row;
     float: none;
     column-gap: 1.2rem;
 }
 
-.socialFooter a:hover{
+.socialFooter a:hover {
     color: var(--color-primary);
 }
 
 /* =========contact form========= */
-.contactForm input , textarea{
+.contactForm input,
+textarea {
     width: 100%;
     padding: 0.7rem;
     margin: 0.3rem 0;
     outline-style: none;
 }
 
-.footerBtn{
+.footerBtn {
     padding: 0.5rem 1.5rem;
     background: var(--color-black);
 }
-/* 
-for tablet and small laptops
-@media screen and (min-width: 540px) and (max-width: 767px){
 
-    nav
-    .navMobileContainer {
-        padding: 0 3rem;
+
+/* ===============for laptops================= */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    /* nav */
+    .navMobileContainer, .mobileMenuContainer {
+        display: none;
     }
 
-    hero section
-    .heroContainer {
-        padding-top: 8rem;
-        padding-bottom: 25rem;
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        top: 0;
-        bottom: 10rem;
-        align-items: center;
+    nav{
+        display: block;
     }
 
-    .heroText{
-        margin: 0;
-        flex-basis: 60%;
+    /* hero section */
+    .heroContainer{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .heroContainerLeft{
+        padding-top: 4rem;
+        align-items: baseline;
         text-align: start;
-        padding: 0 1.5rem 0 3rem;
+        margin: 0 4rem;
     }
 
     .heroText h4 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .heroText h1{
-        font-size: 2rem;
-    }
-    
-    .heroText p {
-        padding: 0.8rem 0;
-        font-size: 0.8rem;
+        font-size: 2.5rem;
     }
 
-    .heroText .btn{
-        padding: 0.5rem 0.9rem;
+    .heroText p{
+        padding: 1rem 0;
         font-size: 0.9rem;
     }
 
-    .heroImg {
-        flex-basis: 40%;
-        max-width: 100%;
-        margin: 0;
-        position: relative;
-        bottom: 0;
-        right: 2.5rem;
+    .heroText .btn{
+        font-size: 0.9rem;
+        padding: 0.7rem 1.1rem;
     }
 
-    .heroBgContainer {
-        top: 12rem;
-        left: 25rem;
+    .heroImg img{
+        margin: 0;
+        min-height: 100%;
+        max-width: 300px;
+        padding: 0;
+    }
+
+    .heroBgContainer{
+        width: 20rem;
+        height: 20rem;
+        bottom: 22rem;
+        right: 0.7rem;
+        margin-bottom: -15rem;
     }
     
-    .heroBg {
-        left: 0rem;
-        width: 22rem;
-        height: 22rem;
+    .heroBg{
+        width: 20rem;
+        height: 20rem;
     }
 
-    .socials {
-        float: none;
-        margin-right: 0;
-        position: relative;
-        top: 1rem;
-        left: 16.5rem;
+    .socials{
+        top: 8rem;
     }
 
-    .socials a {
-        font-size: 1.2rem;
-        padding: 0.4rem 0;
-    } 
+    /* service */
+    /* #services{
+        margin: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    } */
+    #services{
+        margin: 4rem;
+    }
 
-    collab
-    .collab {
+    .expContainer{
+        background: var(--color-primary);
+        padding: 2rem;
+        display: block;
+        margin-bottom: 2rem;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .expContainer p{
+        color: var(--color-black);
+        font-weight: 500;
+        padding-top: 1rem;
+    }
+
+    .servicesContainer{
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1.5rem;
+        padding: 2rem 0 0 0;
+    }
+
+    /* portfolio */
+    .porfolioGroup{
+        margin: 0 4rem;
+    }
+
+    .portfolioContainer{
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+    }
+
+    /* testimonial */
+    .testimonial{
+        max-width: 55rem;
+    }
+
+    .testimonial .image{
+        width: 10rem;
         height: 10rem;
-        width: 100%;
-        position: relative;
-        bottom: 28rem;
-        right: 0;
     }
 
-} 
+    /* footer */
+    #contact{
+    padding: 6rem 4rem;
+    }
 
-*/
+    .contactContainer{
+        flex-direction: row;
+    }
+
+    .contactText{
+        flex-basis: 45%;
+        padding-right: 2rem;
+    }
+
+    .contactForm{
+        flex-basis: 55%;
+        padding-left: 2rem;
+    }
+
+}

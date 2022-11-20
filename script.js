@@ -32,6 +32,13 @@ for (let i = 0; i < navLink.length; i++) {
     });
 }
 
+// =============change navbar color on scroll==============
+const nav = document.querySelector(".navContainer");
+
+window.addEventListener("scroll", ()=>{
+    nav.classList.toggle("windowScroll", window.scrollY > 0);
+});
+
 // ==============Slider=============
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
