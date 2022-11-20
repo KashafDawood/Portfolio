@@ -491,3 +491,45 @@ nav a:hover {
 .swiper-pagination-bullet-active{
     background-color: var(--color-dark);
 }
+
+/* =============footer================ */
+#contact{
+    background: var(--color-dark);
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+
+.contactContainer p{
+    color: var(--color-secondary);
+    padding: 1rem 0;
+}
+
+.socialFooter{
+    top: 0;
+    flex-direction: row;
+    float: none;
+    column-gap: 1.2rem;
+}
+
+.socialFooter a:hover{
+    color: var(--color-primary);
+}
+
+/* =========contact form========= */
+.contactForm input , textarea{
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.3rem 0;
+    outline-style: none;
+}
+
+.footerBtn{
+    padding: 0.5rem 1.5rem;
+    background: var(--color-black);
+}
