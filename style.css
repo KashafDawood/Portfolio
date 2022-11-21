@@ -132,9 +132,10 @@ nav {
     width: 100vw;
     height: 5rem;
     position: fixed;
-    z-index: 2;
+    z-index: 15;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 nav a {
@@ -155,12 +156,10 @@ nav a:hover {
 
 .navLogo{
     flex-basis: 30%;
-    text-align: center;
 }
 
 .navMenu{
     flex-basis: 70%;
-    text-align: center;
 }
 
 /* =================Mobile Nav================== */
@@ -168,7 +167,7 @@ nav a:hover {
     width: 100vw;
     height: 5rem;
     position: fixed;
-    z-index: 2;
+    z-index: 15;
     background-color: var(--color-primary);
     display: flex;
     align-items: center;
@@ -216,7 +215,7 @@ nav a:hover {
     background: var(--color-gradient);
     position: fixed;
     right: -767px;
-    z-index: 1;
+    z-index: 15;
     transition: all 1000ms ease;
 }
 
@@ -349,11 +348,10 @@ header {
 .service {
     background-color: var(--color-secondary);
     color: var(--color-black);
-    width: 100%;
-    height: 20rem;
     padding: 4rem 2rem;
     box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.384);
     cursor: pointer;
+    z-index: 1;
 }
 
 .service:hover {
@@ -422,7 +420,8 @@ header {
 }
 
 .portfolioProjectImage {
-    height: 20rem;
+    width: 100%;
+    height: 13rem;
     display: block;
     overflow: hidden;
     box-shadow: 0 0 1.6rem var(--color-variant);
@@ -433,10 +432,11 @@ header {
 .portfolioProjectImage img {
     transform: 0;
     transition: all 5s ease;
+    object-fit: cover;
 }
 
 .portfolioProjectImage:hover img {
-    transform: translateY(calc(-100% + 18rem));
+    transform: translateY(calc(-100% + 13rem));
 }
 
 /* ==============Testimonial================== */
@@ -465,7 +465,6 @@ header {
     width: 100%;
     overflow: hidden;
     position: relative;
-    cursor: grab;
 }
 
 .testimonial .image {
@@ -709,5 +708,182 @@ textarea {
         flex-basis: 55%;
         padding-left: 2rem;
     }
+
+}
+
+/* =======================for large Screens================= */
+@media screen and (min-width: 1025px){
+    
+    /* nav */
+    .navMobileContainer, .mobileMenuContainer {
+        display: none;
+    }
+
+    nav{
+        display: block;
+    }
+
+
+    /* hero section */
+    .heroContainer{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+    }
+
+    .heroContainerLeft{
+        padding-top: 0;
+        padding-bottom: 2rem;
+        align-items: baseline;
+        text-align: start;
+        margin: 0 6rem;
+    }
+
+    .heroText h4 {
+        font-size: 1.2rem;
+    }
+
+    .heroText h1{
+        font-size: 3rem;
+    }
+
+    .heroText p{
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+
+    .heroText .btn{
+        font-size: 1rem;
+        padding: 0.9rem 1.4rem;
+    }
+
+    .heroImg img{
+        margin: 0;
+        margin-left: 3rem;
+        padding-left: 10rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    .heroBgContainer{
+        display: block;
+        height: 40rem;
+        bottom: 42rem;
+        margin-bottom: -42rem;
+    }
+    
+    .heroBg{
+        width: 70rem;
+        height: 70rem;
+    }
+
+    .socials{
+        top: 15rem;
+        right: 5rem;
+    }
+
+    /* collab */
+    .collab{
+        bottom: 5rem;
+        margin-bottom: -5;
+    }
+
+    /* service */
+    #services{
+        margin: 6rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .servicesWrapper{
+        display: grid;
+        grid-template-columns: 25% auto;
+        gap: 2rem;
+        max-width: 85rem;
+    }
+
+    .expContainer{
+        width: 100%;
+        background: var(--color-primary);
+        box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.384);
+        max-width: 20rem;
+        padding: 2rem;
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    .expContainer h1{
+        font-size: 7rem;
+    }
+
+    .expContainer p{
+        color: var(--color-black);
+        font-weight: 500;
+        padding-top: 1rem;
+    }
+
+    .serContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    .serContainer h3{
+        font-size: 2.2rem;
+    }
+
+    .servicesContainer{
+        grid-template-rows: none;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0;
+        column-gap: 2rem;
+    }
+
+    /* portfolio */
+    .porfolioGroup{
+        margin: 0 6rem;
+    }
+
+    .portfolioContainer{
+        grid-template-rows: none;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;
+    }
+
+    /* testimonial */
+    .testimonial{
+        max-width: 70rem;
+    }
+
+    .testimonial .image{
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .sliderBtn{
+        margin-top: 0.8rem;
+    }
+
+    /* footer */
+    #contact{
+        padding: 6rem;
+        }
+    
+        .contactContainer{
+            flex-direction: row;
+        }
+    
+        .contactText{
+            flex-basis: 45%;
+            padding-right: 2rem;
+        }
+    
+        .contactForm{
+            flex-basis: 55%;
+            padding-left: 2rem;
+        }
 
 }
